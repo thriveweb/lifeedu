@@ -2,25 +2,15 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Helmet from 'react-helmet'
 import _merge from 'lodash/merge'
-import _findIndex from 'lodash/findIndex'
-import _kebabCase from 'lodash/kebabCase'
 
-import ScrollToTop from './components/ScrollToTop'
-import Meta from './components/Meta'
-import Home from './views/Home'
-import About from './views/About'
-import Blog from './views/Blog'
-import SinglePost from './views/SinglePost'
-import Contact from './views/Contact'
+import Page from './views/Page'
+import Form from './views/Form'
 import NoMatch from './views/NoMatch'
-import Nav from './components/Nav'
+import Header from './components/Header'
 import Footer from './components/Footer'
-import GithubCorner from './components/GithubCorner'
 import ServiceWorkerNotifications from './components/ServiceWorkerNotifications'
-import AOS from './components/AOS'
 import Spinner from './components/Spinner'
 import data from './data.json'
-import { documentHasTerm, getCollectionTerms } from './util/collection'
 
 class App extends Component {
   state = {
@@ -61,134 +51,34 @@ class App extends Component {
 
   render () {
     const globalSettings = this.getDocument('settings', 'global')
-    const {
-      siteTitle,
-      siteUrl,
-      siteDescription,
-      socialMediaCard,
-      headerScripts
-    } = globalSettings
-
-    const posts = this.getDocuments('posts').filter(
-      post => post.status !== 'Draft'
-    )
-    const categoriesFromPosts = getCollectionTerms(posts, 'categories')
-    const postCategories = this.getDocuments('postCategories').filter(
-      category => categoriesFromPosts.indexOf(category.name.toLowerCase()) >= 0
-    )
+    const { siteTitle, siteUrl } = globalSettings
+    const pages = this.getDocuments('pages')
 
     return (
       <Router>
         <div className='React-Wrap'>
           {this.state.loading && <Spinner />}
-          <AOS options={{ duration: 250 }} />
-          <ScrollToTop />
           <ServiceWorkerNotifications reloadOnUpdate />
-          <GithubCorner url='https://github.com/Jinksi/netlify-cms-react-starter' />
+
           <Helmet
             defaultTitle={siteTitle}
             titleTemplate={`${siteTitle} | %s`}
           />
-          <Meta
-            title={siteTitle}
-            url={siteUrl}
-            description={siteDescription}
-            absoluteImageUrl={
-              socialMediaCard &&
-              socialMediaCard.image &&
-              siteUrl + socialMediaCard.image
-            }
-            twitterCreatorAccount={
-              socialMediaCard && socialMediaCard.twitterCreatorAccount
-            }
-            twitterSiteAccount={
-              socialMediaCard && socialMediaCard.twitterSiteAccount
-            }
-            headerScripts={headerScripts}
-          />
-          <Nav />
+          <Header />
           <Switch>
-            <Route
-              path='/'
-              exact
-              render={props => (
-                <Home page={this.getDocument('pages', 'home')} {...props} />
-              )}
-            />
-            <Route
-              path='/about/'
-              exact
-              render={props => (
-                <About page={this.getDocument('pages', 'about')} {...props} />
-              )}
-            />
-            <Route
-              path='/contact/'
-              exact
-              render={props => (
-                <Contact
-                  page={this.getDocument('pages', 'contact')}
-                  siteTitle={siteTitle}
-                  {...props}
+            {pages.map((page, index) => {
+              // check for blank ${page.slug}/
+              let Template = Page
+              if (page.template === 'form') Template = Form
+              return (
+                <Route
+                  render={props => <Template page={page} {...props} />}
+                  // kabab this
+                  path={`/${page.slug}/`}
+                  exact
                 />
-              )}
-            />
-
-            {/* Blog Routes */}
-            <Route
-              path='/blog/'
-              exact
-              render={props => (
-                <Blog
-                  posts={posts}
-                  postCategories={postCategories}
-                  {...props}
-                />
-              )}
-            />
-            <Route
-              path='/blog/category/:slug/'
-              render={props => {
-                //  help needed
-                const slug = props.match.params.slug
-                const categoryPosts = posts.filter(post =>
-                  documentHasTerm(post, 'categories', slug)
-                )
-                return (
-                  <Blog
-                    posts={categoryPosts}
-                    postCategories={postCategories}
-                    showFeatured={false}
-                    {...props}
-                  />
-                )
-              }}
-            />
-            <Route
-              path='/blog/:slug/'
-              render={props => {
-                const slug = props.match.params.slug
-                const singlePostID = _findIndex(
-                  posts,
-                  item => _kebabCase(item.title) === slug
-                )
-                const singlePost = posts[singlePostID]
-                const nextPost = posts[singlePostID + 1]
-                const prevPost = posts[singlePostID - 1]
-                return (
-                  <SinglePost
-                    singlePost={singlePost}
-                    nextPostURL={
-                      nextPost && `/blog/${_kebabCase(nextPost.title)}/`
-                    }
-                    prevPostURL={
-                      prevPost && `/blog/${_kebabCase(prevPost.title)}/`
-                    }
-                    {...props}
-                  />
-                )
-              }}
-            />
+              )
+            })}
 
             <Route render={() => <NoMatch siteUrl={siteUrl} />} />
           </Switch>

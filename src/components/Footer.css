@@ -1,14 +1,31 @@
-.Footer {
-  background: var(--primary);
+.Footer--Blue .container {
+  background: url(/images/footer.png) center no-repeat;
+  background-size: cover;
   color: white;
 }
 
-.Footer--Lower {
-  background: var(--primary);
-  padding: 1rem 0;
-  font-weight: 100;
+.Footer--Blue--dash {
+  background: white;
+  width: 10%;
+  height: 2px;
+  margin: 2rem auto;
 }
 
-.Footer--Lower a {
-  color: inherit;
+.Footer--White .container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.Footer--White .container p {
+  margin: 0;
+  padding: 0;
+}
+
+.Footer--White .container a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+.Footer--White .container a:hover {
+  color: var(--primary);
 }
