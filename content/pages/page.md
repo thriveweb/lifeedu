@@ -2,6 +2,7 @@
 title: Example page
 template: Page
 slug: example-page
+audio: /images/uploads/sampleaudio_0.7mb.mp3
 ---
 
 # H1 Ipsum Presents
