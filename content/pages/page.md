@@ -1,7 +1,7 @@
 ---
 title: Example page
 template: Page
-urlSlug: example page
+urlSlug: example-page
 ---
 # HTML Ipsum Presents
 
