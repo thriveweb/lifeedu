@@ -36,5 +36,5 @@ collections: # A list of collections the CMS should be able to edit
         widget: 'select'
         options: ["Page", "Form"]
         default: 'Page'
-      - {label: URL Slug, name: urlSlug, widget: string}
+      - {label: URL Slug, name: slug, widget: string}
       - {label: Content, name: body, widget: markdown}
