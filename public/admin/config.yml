@@ -37,4 +37,4 @@ collections: # A list of collections the CMS should be able to edit
         options: ["Page", "Form"]
         default: 'Page'
       - {label: URL Slug, name: slug, widget: string}
-      - {label: Content, name: body, widget: markdown}
+      - {label: Content, name: body, widget: markdown} 
