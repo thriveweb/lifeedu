@@ -25,7 +25,18 @@
     <meta id='headerScripts'>
   </head>
   <body>
-    
+    <form name='neutral' netlify netlify-honeypot='bot-field' hidden>
+      <input type='text' name='name' />
+      <input type='email' name='email' />
+      <textarea name='message'></textarea>
+      <input type='checkbox' name='agree' />
+    </form>
+    <form name='sad' netlify netlify-honeypot='bot-field' hidden>
+      <input type='text' name='name' />
+      <input type='email' name='email' />
+      <textarea name='message'></textarea>
+      <input type='checkbox' name='agree' />
+    </form>
     <div id="root"></div>
     <script src="https://identity-js.netlify.com/v1/netlify-identity-widget.js"></script>
 <script>

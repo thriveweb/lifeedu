@@ -77,14 +77,14 @@ class FormSwitch extends React.Component {
             page.neutralMessage && (
               <div className='FormResults-result'>
                 {page.neutralMessage}
-                <LifeFormSad title={page.formTitle} />
+                <LifeForm title={page.formTitle} name='neutral' />
               </div>
             )}
           {activeItem === 3 &&
             page.sadMessage && (
               <div className='FormResults-result'>
                 {page.sadMessage}
-                <LifeForm title={page.formTitle} />
+                <LifeForm title={page.formTitle} name='sad' />
               </div>
             )}
         </div>
