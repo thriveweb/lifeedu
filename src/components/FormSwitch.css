@@ -1,0 +1,33 @@
+.FormSwitch {
+  margin: 8rem 0 4rem 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.FormSwitch--option {
+  width: 30%;
+  cursor: pointer;
+}
+.FormSwitch--option:hover {
+  opacity: 0.8;
+}
+.FormSwitch--option:hover .Button-outline {
+  background: var(--primary);
+  color: white;
+  outline: none;
+}
+.FormSwitch--option.active .Button-outline {
+  border-color: var(--primary);
+}
+.FormSwitch--image {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.FormResults-result {
+  text-align: center;
+  font-size: 1.8rem;
+  background: var(--lightGrey);
+  padding: 4rem;
+}

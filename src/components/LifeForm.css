@@ -1,0 +1,47 @@
+.LifeForm {
+  background: white;
+  padding: 4rem;
+  width: 100%;
+  max-width: 80%;
+  margin: 4rem auto;
+  border: dashed 2px var(--primary);
+}
+
+.LifeForm--title {
+  font-weight: 300;
+  background: url(/images/mail.svg) right center no-repeat;
+  font-size: 2.2rem;
+  width: 100%;
+  min-height: 4rem;
+  margin: 0;
+}
+
+.LifeForm .EnquiryForm--Input {
+  border: var(--midGrey) 1px solid;
+  border-radius: 8px;
+  padding: 1rem 1rem;
+}
+.LifeForm .EnquiryForm--LabelHalf {
+}
+.LifeForm .EnquiryForm--Textarea {
+  width: 100%;
+}
+
+.LifeForm .EnquiryForm--Checkbox {
+  margin: 0 1rem 0 0;
+  flex-grow: 0;
+}
+
+.LifeForm .EnquiryForm--SubmitButton {
+  background: #f5861f;
+  border: 8px solid #fdebd8;
+  color: #ffffff;
+  margin: 2rem auto 0 auto;
+  cursor: pointer;
+}
+
+.LifeForm .EnquiryForm--SubmitButton:hover {
+  background: white;
+  border: 8px solid #fdebd8;
+  color: #f5861f;
+}

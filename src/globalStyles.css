@@ -135,3 +135,31 @@ blockquote {
   pointer-events: none;
   cursor: progress;
 }
+
+.Button-outline {
+  display: block;
+  margin: 1rem 0;
+  padding: 1rem 3rem;
+  /* Rectangle: */
+  background: white;
+  border: 8px solid var(--lightGrey);
+  border-radius: 100px;
+  /* Go to website: */
+  font-size: 17px;
+  color: var(--secondary);
+  letter-spacing: -0.3px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.Button-outline:hover,
+.Button-outline:focus {
+  background: var(--primary);
+  color: white;
+  outline: none;
+}
+.Button-outline[disabled] {
+  opacity: 0.4;
+  pointer-events: none;
+  cursor: progress;
+}

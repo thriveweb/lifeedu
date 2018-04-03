@@ -2,10 +2,11 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 import Content from '../components/Content.js'
-import './Form.css'
+import FormSwitch from '../components/FormSwitch.js'
+import './FormTemplate.css'
 
 export default ({ page }) => (
-  <div className='Form'>
+  <div className='FormTemplate'>
     <Helmet>
       <title>{page.title}</title>
     </Helmet>
@@ -17,6 +18,9 @@ export default ({ page }) => (
             <source src={page.audio} type='audio/mpeg' />
           </audio>
         )}
+        <div className='container skinny'>
+          <FormSwitch page={page} />
+        </div>
       </div>
     </div>
   </div>

@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import _merge from 'lodash/merge'
 
 import Page from './views/Page'
-import Form from './views/Form'
+import FormTemplate from './views/FormTemplate'
 import NoMatch from './views/NoMatch'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -69,7 +69,7 @@ class App extends Component {
             {pages.map((page, index) => {
               // check for blank ${page.slug}/
               let Template = Page
-              if (page.template === 'form') Template = Form
+              if (page.template === 'Form') Template = FormTemplate
               return (
                 <Route
                   render={props => <Template page={page} {...props} />}
