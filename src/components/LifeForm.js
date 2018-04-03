@@ -58,7 +58,6 @@ class Form extends React.Component {
 
   render () {
     const { title, name, subject, action } = this.props
-
     return (
       <form
         className='EnquiryForm LifeForm'
@@ -104,7 +103,7 @@ class Form extends React.Component {
           <input
             className='EnquiryForm--Input EnquiryForm--Checkbox'
             type='checkbox'
-            checked
+            defaultChecked
             name='agree'
           />I’m happy to be contacted by Life Education
         </label>

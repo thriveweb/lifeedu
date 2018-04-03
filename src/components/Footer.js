@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import './Footer.css'
 
@@ -36,7 +37,40 @@ export default ({ globalSettings, socialSettings, navLinks }) => (
             Broadbeach QLD 4218
           </p>
         </div>
-        <div className='one-quarter'>facebook</div>
+        <div className='one-quarter'>
+          {globalSettings.socialMediaCard.twitterSiteAccount && (
+            <Link
+              target='_blank'
+              to={globalSettings.socialMediaCard.twitterURL}
+            >
+              <img src='/images/twitter.svg' alt='twitter' />
+            </Link>
+          )}
+          {globalSettings.socialMediaCard.facebookURL && (
+            <Link
+              target='_blank'
+              to={globalSettings.socialMediaCard.facebookURL}
+            >
+              <img src='/images/facebook.svg' alt='facebook' />
+            </Link>
+          )}
+          {globalSettings.socialMediaCard.linkedinURL && (
+            <Link
+              target='_blank'
+              to={globalSettings.socialMediaCard.linkedinURL}
+            >
+              <img src='/images/linkedin.svg' alt='linkedin' />
+            </Link>
+          )}
+          {globalSettings.socialMediaCard.instagramURL && (
+            <Link
+              target='_blank'
+              to={globalSettings.socialMediaCard.instagramURL}
+            >
+              <img src='/images/instagram.svg' alt='instagram' />
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   </footer>
