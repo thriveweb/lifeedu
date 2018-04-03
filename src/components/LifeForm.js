@@ -10,7 +10,7 @@ const fetch = window.fetch
 class Form extends React.Component {
   static defaultProps = {
     title: '',
-    name: 'Life Form',
+    name: 'neutral',
     subject: 'Kids project team', // optional subject of the notification email
     action: '',
     successMessage: 'Thanks for your feedback, we will get back to you soon',
