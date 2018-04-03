@@ -9,7 +9,8 @@ export default ({ source, className = '' }) => (
     className={`Content ${className}`}
     source={source}
     renderers={{
-      Image: ImageWithSrcset
+      Image: ImageWithSrcset,
+      HtmlBlock: HtmlBlock
     }}
   />
 )
@@ -21,5 +22,14 @@ const ImageWithSrcset = ({ nodeKey, src, alt, ...props }) => (
     src={getImageSrc(src)}
     srcSet={getImageSrcset(src)}
     alt={alt}
+  />
+)
+
+const HtmlBlock = ({ literal }) => (
+  <div
+    className={literal.indexOf('iframe') ? `videoWrapper` : ``}
+    dangerouslySetInnerHTML={{
+      __html: literal
+    }}
   />
 )
