@@ -11,6 +11,11 @@
   margin: 2rem auto;
 }
 
+.Footer--Blue--message {
+  width: 60%;
+  margin: 0 auto;
+}
+
 .Footer--White .container {
   display: flex;
   align-items: stretch;
@@ -31,5 +36,39 @@
 }
 
 .Footer--White .one-quarter {
-  width: 22%;
+  min-width: 22%;
+  max-width: 25%;
+}
+.Footer--White .one-quarter:nth-child(1) {
+  min-width: 12%;
+  max-width: 12%;
+}
+
+@media screen and (max-width: 900px) {
+  .Footer--White .container {
+    display: block;
+    text-align: center;
+  }
+  .Footer--White .one-quarter,
+  .Footer--White .one-quarter:nth-child(1) {
+    min-width: 100%;
+    max-width: 100%;
+    margin: 0 auto 1rem auto;
+  }
+}
+
+.FooterSocial img {
+  max-width: 20px;
+  max-height: 20px;
+  width: auto;
+  height: auto;
+  margin: 1rem;
+}
+
+.FooterSocial a {
+  display: inline-block;
+}
+
+.FooterSocial a:hover img {
+  opacity: 0.6;
 }

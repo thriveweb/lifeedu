@@ -13,7 +13,9 @@ export default ({ globalSettings }) => (
             <div className='Footer--Blue--dash' />
           </div>
         )}
-        {globalSettings.blueMessage && <p>{globalSettings.blueMessage}</p>}
+        {globalSettings.blueMessage && (
+          <p className='Footer--Blue--message'>{globalSettings.blueMessage}</p>
+        )}
         {globalSettings.blueLinkURL && (
           <a href={`mailto:${globalSettings.blueLinkURL}`} className='Button'>
             Go to website
@@ -37,7 +39,7 @@ export default ({ globalSettings }) => (
         <div className='one-quarter'>
           <p>{globalSettings.officeAddress}</p>
         </div>
-        <div className='one-quarter'>
+        <div className='one-quarter FooterSocial'>
           {globalSettings.socialMediaCard.twitterURL && (
             <Link
               target='_blank'

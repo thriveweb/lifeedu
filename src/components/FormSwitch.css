@@ -31,3 +31,21 @@
   background: var(--lightGrey);
   padding: 4rem;
 }
+@media screen and (max-width: 700px) {
+  .FormTemplate .container.skinny {
+    width: 100% !important;
+  }
+  .FormSwitch {
+    margin: 0;
+    display: block;
+  }
+  .FormSwitch--option {
+    width: 80%;
+    margin: 0 auto 1rem auto;
+    cursor: pointer;
+  }
+
+  .FormResults-result {
+    padding: 2rem;
+  }
+}

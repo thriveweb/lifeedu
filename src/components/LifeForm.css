@@ -6,6 +6,15 @@
   margin: 4rem auto;
   border: dashed 2px var(--primary);
 }
+@media screen and (max-width: 700px) {
+  .LifeForm {
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 2rem auto;
+    border: dashed 2px var(--primary);
+  }
+}
 
 .LifeForm--title {
   font-weight: 300;
@@ -15,13 +24,24 @@
   min-height: 4rem;
   margin: 0;
 }
+@media screen and (max-width: 500px) {
+  .LifeForm--title {
+    font-weight: 300;
+    background: none;
+    font-size: 1.3rem;
+    width: 100%;
+    min-height: 1rem;
+    margin: 0;
+  }
+}
 
 .LifeForm .EnquiryForm--Input {
   border: var(--midGrey) 1px solid;
   border-radius: 8px;
   padding: 1rem 1rem;
+  width: 100%;
 }
-.LifeForm .EnquiryForm--LabelHalf {
+@media screen and (max-width: 500px) {
 }
 .LifeForm .EnquiryForm--Textarea {
   width: 100%;
@@ -30,6 +50,7 @@
 .LifeForm .EnquiryForm--Checkbox {
   margin: 0 1rem 0 0;
   flex-grow: 0;
+  width: auto;
 }
 
 .LifeForm .EnquiryForm--SubmitButton {

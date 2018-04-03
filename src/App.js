@@ -72,6 +72,7 @@ class App extends Component {
               if (page.template === 'Form') Template = FormTemplate
               return (
                 <Route
+                  key={index + page.slug}
                   render={props => <Template page={page} {...props} />}
                   // kabab this
                   path={`/${page.slug}/`}
