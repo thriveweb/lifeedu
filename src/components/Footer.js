@@ -23,19 +23,16 @@ export default ({ globalSettings, socialSettings, navLinks }) => (
         <div className='one-quarter'>Contact Us:</div>
         <div className='one-quarter'>
           <p>
-            <a href='mailto:qld@lifeeducation.org.au'>
-              qld@lifeeducation.org.au
+            <a href={`mailto:${globalSettings.email}`}>
+              {globalSettings.email}
             </a>
           </p>
           <p>
-            <a href='tel:1300 427 653'>1300 427 653</a>
+            <a href={`tel:${globalSettings.phone}`}>{globalSettings.phone}</a>
           </p>
         </div>
         <div className='one-quarter'>
-          <p>
-            89 Sunshine Boulevard <br />
-            Broadbeach QLD 4218
-          </p>
+          <p>{globalSettings.officeAddress}</p>
         </div>
         <div className='one-quarter'>
           {globalSettings.socialMediaCard.twitterSiteAccount && (
