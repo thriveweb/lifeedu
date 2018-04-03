@@ -67,6 +67,7 @@ class FormSad extends React.Component {
         data-netlify=''
         data-netlify-honeypot='_gotcha'
       >
+        <input type='hidden' name='form-name' value='sad' />
         {title && <h2 className='LifeForm--title'>{title}</h2>}
         {this.state.alert && (
           <div className='EnquiryForm--Alert'>{this.state.alert}</div>
