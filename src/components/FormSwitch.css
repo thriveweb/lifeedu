@@ -17,14 +17,13 @@
   outline: none;
 }
 .FormSwitch--option.active .Button-outline {
-  border-color: var(--primary);
+  border-color: var(--midGrey);
 }
 .FormSwitch--image {
   display: block;
   margin: 0 auto;
   padding: 0;
 }
-
 .FormResults-result {
   text-align: center;
   font-size: 1.8rem;
@@ -33,7 +32,8 @@
 }
 @media screen and (max-width: 700px) {
   .FormTemplate .container.skinny {
-    width: 100% !important;
+    width: 100%;
+    padding: 0;
   }
   .FormSwitch {
     margin: 0;
@@ -44,8 +44,26 @@
     margin: 0 auto 1rem auto;
     cursor: pointer;
   }
-
+  .FormSwitch--image {
+    display: none;
+  }
   .FormResults-result {
-    padding: 2rem;
+    padding: 2rem 0 0 0;
+  }
+
+  .FormSwitch--option.happy .Button-outline {
+    background: #e6f5e2 url(/images/happy.svg) 0 0 no-repeat;
+    background-size: contain;
+  }
+  .FormSwitch--option.neutral .Button-outline {
+    background: #fef5da url(/images/neutral.svg) 0 0 no-repeat;
+    background-size: contain;
+  }
+  .FormSwitch--option.sad .Button-outline {
+    background: #f9e0e1 url(/images/sad.svg) 0 0 no-repeat;
+    background-size: contain;
+  }
+  .FormSwitch--option:hover .Button-outline {
+    color: var(--secondary);
   }
 }

@@ -24,7 +24,7 @@
   min-height: 4rem;
   margin: 0;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .LifeForm--title {
     font-weight: 300;
     background: none;

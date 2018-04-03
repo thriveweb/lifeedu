@@ -16,7 +16,7 @@ const NoMatch = ({ siteUrl }) => (
           </a>
         </p>
       </div>
-      <form name='netural' netlify netlify-honeypot='bot-field' hidden>
+      <form name='neutral' netlify netlify-honeypot='bot-field' hidden>
         <input type='text' name='name' />
         <input type='email' name='email' />
         <textarea name='message' />
