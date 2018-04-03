@@ -3,14 +3,19 @@ siteUrl: 'https://netlify-cms-react-starter.netlify.com'
 siteDescription: >-
   A starter project for creating lightning-fast, offline-first websites with
   Netlify CMS and React.
-socialMediaCard:
-  facebookURL: 'http://facebook.com'
-  instagramURL: 'http://instagram.com'
-  linkedinURL: 'http://linkedin.com'
-  twitterURL: 'http://twitter.com'
+blueTitle: Visit Life Education website
+blueMessage: >-
+  And learn more about our program orem ipsum dolor sit amet, consectetur
+  adipiscing elit, sed do eiusmod tempor incididunt ut.
+blueLinkURL: 'http://google.com'
 officeAddress: |-
   89 Sunshine Boulevard
   Broadbeach QLD 4218
 phone: '1300427653'
 email: qld@lifeeducation.org.au
+socialMediaCard:
+  facebookURL: 'http://facebook.com'
+  instagramURL: 'http://instagram.com'
+  linkedinURL: 'http://linkedin.com'
+  twitterURL: 'http://twitter.com'
 headerScripts: <!-- Add your analytics scripts / verification meta here -->
