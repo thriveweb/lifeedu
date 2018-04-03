@@ -82,7 +82,7 @@ class App extends Component {
 
             <Route render={() => <NoMatch siteUrl={siteUrl} />} />
           </Switch>
-          <Footer />
+          <Footer globalSettings={globalSettings} />
         </div>
       </Router>
     )

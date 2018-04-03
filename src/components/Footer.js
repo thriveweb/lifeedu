@@ -3,19 +3,22 @@ import { Link } from 'react-router-dom'
 
 import './Footer.css'
 
-export default ({ globalSettings, socialSettings, navLinks }) => (
+export default ({ globalSettings }) => (
   <footer className='Footer'>
     <div className='Footer--Blue'>
       <div className='container taCenter'>
-        <h2>Visit Life Education website</h2>
-        <div className='Footer--Blue--dash' />
-        <p>
-          And learn more about our program orem ipsum dolor sit amet,
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
-        </p>
-        <a href='http://google.com' className='Button'>
-          Go to website
-        </a>
+        {globalSettings.blueTitle && (
+          <div>
+            <h2>{globalSettings.blueTitle}</h2>
+            <div className='Footer--Blue--dash' />
+          </div>
+        )}
+        {globalSettings.blueMessage && <p>{globalSettings.blueMessage}</p>}
+        {globalSettings.blueLinkURL && (
+          <a href={`mailto:${globalSettings.blueLinkURL}`} className='Button'>
+            Go to website
+          </a>
+        )}
       </div>
     </div>
     <div className='Footer--White'>
@@ -35,7 +38,7 @@ export default ({ globalSettings, socialSettings, navLinks }) => (
           <p>{globalSettings.officeAddress}</p>
         </div>
         <div className='one-quarter'>
-          {globalSettings.socialMediaCard.twitterSiteAccount && (
+          {globalSettings.socialMediaCard.twitterURL && (
             <Link
               target='_blank'
               to={globalSettings.socialMediaCard.twitterURL}

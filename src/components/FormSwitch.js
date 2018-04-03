@@ -20,7 +20,6 @@ class FormSwitch extends React.Component {
   render () {
     const { activeItem } = this.state
     const { page } = this.props
-    console.log(page)
     return (
       <main>
         <div className='FormSwitch'>

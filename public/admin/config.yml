@@ -21,6 +21,12 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Site Title, name: siteTitle, widget: string}
           - {label: Site Url, name: siteUrl, widget: string, required: false}
           - {label: Site Description, name: siteDescription, widget: text, required: false}
+          - {label: Blue Title, name: blueTitle, widget: string, required: false}
+          - {label: Blue message, name: blueMessage, widget: text, required: false}
+          - {label: Blue link URL, name: blueLinkURL, widget: string, required: false}
+          - {label: Office Address, name: officeAddress, widget: text, required: false}
+          - {label: Phone, name: phone, widget: string, required: false}
+          - {label: Email, name: email, widget: string, required: false}
           - label: Social Media
             name: socialMediaCard
             widget: object
@@ -29,9 +35,6 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Facebook URL, name: facebookURL, widget: string, required: false}
               - {label: Linkedin URL, name: linkedinURL, widget: string, required: false}
               - {label: Instagram URL, name: instagramURL, widget: string, required: false}
-          - {label: Office Address, name: officeAddress, widget: text, required: false}
-          - {label: Phone, name: phone, widget: string, required: false}
-          - {label: Email, name: email, widget: string, required: false}
           - {label: Header Meta / Scripts, name: headerScripts, widget: text, required: false}
           - {label: Enable Service Worker Pre-Cache, name: enableServiceWorker, widget: boolean, required: false}
   - name: "pages"

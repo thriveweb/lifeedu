@@ -29,3 +29,7 @@
 .Footer--White .container a:hover {
   color: var(--primary);
 }
+
+.Footer--White .one-quarter {
+  width: 22%;
+}
