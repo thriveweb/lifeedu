@@ -1,6 +1,7 @@
 import React from 'react'
 
 import LifeForm from './LifeForm'
+import LifeFormSad from './LifeFormSad'
 import './FormSwitch.css'
 
 class FormSwitch extends React.Component {
@@ -74,7 +75,10 @@ class FormSwitch extends React.Component {
             )}
           {activeItem === 2 &&
             page.neutralMessage && (
-              <div className='FormResults-result'>{page.neutralMessage}</div>
+              <div className='FormResults-result'>
+                {page.neutralMessage}
+                <LifeFormSad title={page.formTitle} />
+              </div>
             )}
           {activeItem === 3 &&
             page.sadMessage && (
