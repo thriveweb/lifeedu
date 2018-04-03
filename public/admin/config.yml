@@ -39,7 +39,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: URL Slug, name: slug, widget: string}
       - {label: Content, name: body, widget: markdown}
       - {label: Audio, name: audio, widget: file}
-      - {label: Happy message, name: happyMessage, widget: textarea}
-      - {label: Neutral message, name: neutralMessage, widget: textarea}
-      - {label: Sad message, name: sadMessage, widget: textarea}
+      - {label: Happy message, name: happyMessage, widget: text}
+      - {label: Neutral message, name: neutralMessage, widget: text}
+      - {label: Sad message, name: sadMessage, widget: text}
       - {label: Form Title, name: formTitle, widget: string}
