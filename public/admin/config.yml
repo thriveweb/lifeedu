@@ -37,9 +37,9 @@ collections: # A list of collections the CMS should be able to edit
         options: ["Page", "Form"]
         default: 'Page'
       - {label: URL Slug, name: slug, widget: string}
-      - {label: Content, name: body, widget: markdown}
-      - {label: Audio, name: audio, widget: file}
-      - {label: Happy message, name: happyMessage, widget: text}
-      - {label: Neutral message, name: neutralMessage, widget: text}
-      - {label: Sad message, name: sadMessage, widget: text}
-      - {label: Form Title, name: formTitle, widget: string}
+      - {label: Content, name: body, widget: markdown, required: false}
+      - {label: Audio, name: audio, widget: file, required: false}
+      - {label: Happy message, name: happyMessage, widget: text, required: false}
+      - {label: Neutral message, name: neutralMessage, widget: text, required: false}
+      - {label: Sad message, name: sadMessage, widget: text, required: false}
+      - {label: Form Title, name: formTitle, widget: string, required: false}
