@@ -1,6 +1,6 @@
 ---
 title: Example Form
-template: Page
+template: Form
 slug: example-form
 happyMessage: >-
   Thank you! I’m so pleased to hear you think we’re wonderful too. We’re in this
