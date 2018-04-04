@@ -22,3 +22,14 @@
   width: 100%;
   height: auto;
 }
+.Header--image img.small {
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  .Header--image img.large {
+    display: none;
+  }
+  .Header--image img.small {
+    display: block;
+  }
+}

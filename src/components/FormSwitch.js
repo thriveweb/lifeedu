@@ -1,7 +1,6 @@
 import React from 'react'
 
 import LifeForm from './LifeForm'
-import LifeFormSad from './LifeFormSad'
 import './FormSwitch.css'
 
 class FormSwitch extends React.Component {

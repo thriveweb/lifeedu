@@ -41,8 +41,7 @@
   padding: 1rem 1rem;
   width: 100%;
 }
-@media screen and (max-width: 500px) {
-}
+
 .LifeForm .EnquiryForm--Textarea {
   width: 100%;
 }
