@@ -17,7 +17,11 @@ export default ({ globalSettings }) => (
           <p className='Footer--Blue--message'>{globalSettings.blueMessage}</p>
         )}
         {globalSettings.blueLinkURL && (
-          <a href={`mailto:${globalSettings.blueLinkURL}`} className='Button'>
+          <a
+            traget='_blank'
+            href={globalSettings.blueLinkURL}
+            className='Button'
+          >
             Go to website
           </a>
         )}
