@@ -13,8 +13,7 @@ class Form extends React.Component {
     name: 'neutral',
     subject: 'Kids project team', // optional subject of the notification email
     action: '',
-    successMessage: 'Thanks for your feedback, we will get back to you soon',
-    noreplyMessage: 'Thanks for your feedback, we will take it as a comment',
+    successMessage: 'Thanks for your positive feedback :)',
     errorMessage:
       'There is a problem, your message has not been sent, please try contacting us via email'
   }

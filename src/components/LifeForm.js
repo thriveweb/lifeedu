@@ -62,7 +62,7 @@ class Form extends React.Component {
   }
 
   render () {
-    const { title, name, subject, action, required, className } = this.props
+    const { title, name, subject, action, className } = this.props
     return (
       <form
         className={`EnquiryForm LifeForm ${className}`}
@@ -82,7 +82,7 @@ class Form extends React.Component {
             type='text'
             placeholder='Name'
             name='name'
-            required={required}
+            required
           />
         </label>
         <label className='EnquiryForm--Label EnquiryForm--LabelHalf'>
@@ -91,7 +91,7 @@ class Form extends React.Component {
             type='email'
             placeholder='Email'
             name='email'
-            required={required}
+            required
           />
         </label>
 
@@ -101,7 +101,7 @@ class Form extends React.Component {
             placeholder='Your feedback'
             name='message'
             rows='10'
-            required={required}
+            required
           />
         </label>
         <label className='EnquiryForm--Label EnquiryForm--Label--agree'>
