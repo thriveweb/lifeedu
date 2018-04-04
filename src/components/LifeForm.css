@@ -8,6 +8,7 @@
 }
 @media screen and (max-width: 700px) {
   .LifeForm {
+    background: white;
     padding: 1rem;
     width: 100%;
     max-width: 100%;
