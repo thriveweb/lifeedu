@@ -14,13 +14,15 @@ class Form extends React.Component {
     subject: 'Kids project team', // optional subject of the notification email
     action: '',
     successMessage: 'Thanks for your feedback, we will get back to you soon',
+    noreplyMessage: 'Thanks for your feedback, we will take it as a comment',
     errorMessage:
       'There is a problem, your message has not been sent, please try contacting us via email'
   }
 
   state = {
     alert: '',
-    disabled: false
+    disabled: false,
+    agree: true
   }
 
   handleSubmit = e => {
@@ -41,9 +43,12 @@ class Form extends React.Component {
         }
       })
       .then(() => {
+        const message = this.state.agree
+          ? this.props.successMessage
+          : this.props.noreplyMessage
         form.reset()
         this.setState({
-          alert: this.props.successMessage,
+          alert: message,
           disabled: false
         })
       })
@@ -105,6 +110,7 @@ class Form extends React.Component {
             type='checkbox'
             defaultChecked
             name='agree'
+            onChange={e => this.setState({ agree: e.target.checked })}
           />I’m happy to be contacted by Life Education
         </label>
         <input type='text' name='_gotcha' style={{ display: 'none' }} />
