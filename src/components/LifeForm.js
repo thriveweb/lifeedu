@@ -104,7 +104,7 @@ class Form extends React.Component {
             required
           />
         </label>
-        <label className='EnquiryForm--Label'>
+        <label className='EnquiryForm--Label EnquiryForm--Label--agree'>
           <input
             className='EnquiryForm--Input EnquiryForm--Checkbox'
             type='checkbox'
