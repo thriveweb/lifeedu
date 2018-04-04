@@ -62,59 +62,21 @@ class Form extends React.Component {
   }
 
   render () {
-    const { title, name, subject, action, required, className } = this.props
+    const { name, subject, action, className } = this.props
     return (
       <form
-        className={`EnquiryForm LifeForm ${className}`}
+        className={`EnquiryForm LifeFormHappy ${className}`}
         name={name}
         action={action}
         onSubmit={this.handleSubmit}
         data-netlify=''
         data-netlify-honeypot='_gotcha'
       >
-        {title && <h2 className='LifeForm--title'>{title}</h2>}
         {this.state.alert && (
           <div className='EnquiryForm--Alert'>{this.state.alert}</div>
         )}
-        <label className='EnquiryForm--Label EnquiryForm--LabelHalf'>
-          <input
-            className='EnquiryForm--Input'
-            type='text'
-            placeholder='Name'
-            name='name'
-            required={required}
-          />
-        </label>
-        <label className='EnquiryForm--Label EnquiryForm--LabelHalf'>
-          <input
-            className='EnquiryForm--Input'
-            type='email'
-            placeholder='Email'
-            name='email'
-            required={required}
-          />
-        </label>
-
-        <label className='EnquiryForm--Label'>
-          <textarea
-            className='EnquiryForm--Input EnquiryForm--Textarea'
-            placeholder='Your feedback'
-            name='message'
-            rows='10'
-            required={required}
-          />
-        </label>
-        <label className='EnquiryForm--Label EnquiryForm--Label--agree'>
-          <input
-            className='EnquiryForm--Input EnquiryForm--Checkbox'
-            type='checkbox'
-            defaultChecked
-            name='agree'
-            onChange={e => this.setState({ agree: e.target.checked })}
-          />I’m happy to be contacted by Life Education
-        </label>
-        <input type='text' name='_gotcha' style={{ display: 'none' }} />
         {!!subject && <input type='hidden' name='subject' value={subject} />}
+        <input type='hidden' name='happy_feedback' value='happy feedback' />
         <input type='hidden' name='form-name' value={name} />
         <input
           className='Button EnquiryForm--SubmitButton'

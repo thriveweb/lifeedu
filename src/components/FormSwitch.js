@@ -1,6 +1,7 @@
 import React from 'react'
 
 import LifeForm from './LifeForm'
+import LifeFormHappy from './LifeFormHappy'
 import './FormSwitch.css'
 
 class FormSwitch extends React.Component {
@@ -68,8 +69,7 @@ class FormSwitch extends React.Component {
             page.happyMessage && (
               <div className='FormResults-result'>
                 {page.happyMessage}
-                Thank you! I’m so pleased to hear you think we’re wonderful too.
-                We’re in this together!
+                <LifeFormHappy title={page.formTitle} name='happy' />
               </div>
             )}
           {activeItem === 2 &&

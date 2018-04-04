@@ -1,6 +1,6 @@
 .LifeForm {
-  background: white;
-  padding: 4rem;
+  background: white url(/images/mail.svg) 98% 1rem no-repeat;
+  padding: 2rem 4rem;
   width: 100%;
   max-width: 80%;
   margin: 4rem auto;
@@ -18,11 +18,9 @@
 
 .LifeForm--title {
   font-weight: 300;
-  background: url(/images/mail.svg) right center no-repeat;
   font-size: 2.2rem;
   width: 100%;
-  min-height: 4rem;
-  margin: 0;
+  margin: 0 0 2rem 0;
 }
 @media screen and (max-width: 600px) {
   .LifeForm--title {
@@ -30,7 +28,6 @@
     background: none;
     font-size: 1.3rem;
     width: 100%;
-    min-height: 1rem;
     margin: 0;
   }
 }
@@ -61,6 +58,28 @@
 }
 
 .LifeForm .EnquiryForm--SubmitButton:hover {
+  background: white;
+  border: 8px solid #fdebd8;
+  color: #f5861f;
+}
+
+.LifeFormHappy {
+  background: transparent;
+  border: none;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.LifeFormHappy .EnquiryForm--SubmitButton {
+  background: #f5861f;
+  border: 8px solid #fdebd8;
+  color: #ffffff;
+  margin: 2rem auto 0 auto;
+  cursor: pointer;
+}
+
+.LifeFormHappy .EnquiryForm--SubmitButton:hover {
   background: white;
   border: 8px solid #fdebd8;
   color: #f5861f;
