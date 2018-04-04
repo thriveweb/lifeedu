@@ -48,7 +48,7 @@ class Form extends React.Component {
         form.reset()
         this.setState({
           alert: message,
-          disabled: false
+          disabled: true
         })
       })
       .catch(err => {
