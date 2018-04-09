@@ -12,4 +12,4 @@ sadMessage: >-
   we’re committed to turning the frown upside down. 
 formTitle: Share your experience with us
 ---
-## How do you feel about the work Life Education does to ensure Queensland children get to grow up healthy ans safe?
+## How do you feel about the work Life Education does to ensure Queensland children get to grow up healthy & safe?
