@@ -64,28 +64,26 @@ class App extends Component {
             defaultTitle={siteTitle}
             titleTemplate={`${siteTitle} | %s`}
           />
-
+          <Header />
           <Switch>
             {pages.map((page, index) => {
               // check for blank ${page.slug}/
               let Template = Page
               if (page.template === 'Form') Template = FormTemplate
               return (
-                <main>
-                  <Header />
-                  <Route
-                    key={index + page.slug}
-                    render={props => <Template page={page} {...props} />}
-                    // kabab this
-                    path={`/${page.slug}/`}
-                    exact
-                  />
-                  <Footer globalSettings={globalSettings} />
-                </main>
+                <Route
+                  key={index + page.slug}
+                  render={props => <Template page={page} {...props} />}
+                  // kabab this
+                  path={`/${page.slug}/`}
+                  exact
+                />
               )
             })}
+
             <Route render={() => <NoMatch siteUrl={siteUrl} />} />
           </Switch>
+          <Footer globalSettings={globalSettings} />
         </div>
       </Router>
     )
