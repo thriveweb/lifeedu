@@ -1,10 +1,14 @@
 ---
-title: page test
+title: 'artwork '
 template: Page
-slug: pagetest
-happyMessage: asdasd
-neutralMessage: asdasd
-sadMessage: asd
-formTitle: asd
+slug: artwork
+happyMessage: ''
+neutralMessage: ''
+sadMessage: ''
+formTitle: ''
 ---
-asdasdasd
+# You've got mail!
+
+
+
+![](/images/uploads/kids pic 2.jpg)
