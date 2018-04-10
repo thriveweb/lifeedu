@@ -1,7 +1,7 @@
 ---
 title: 'Government Funding '
 template: Page
-slug: 'funding '
+slug: funding
 ---
 ## I have good news and bad . . .
 
