@@ -1,7 +1,7 @@
 ---
 title: Jimmy
 template: Page
-slug: 'jimmy '
+slug: jimmy
 ---
 ## Would I still be here today? 
 
