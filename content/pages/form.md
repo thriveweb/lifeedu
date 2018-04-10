@@ -1,7 +1,7 @@
 ---
 title: Example Form
 template: Form
-slug: 'survey '
+slug: survey
 happyMessage: >-
   Thank you! I’m so pleased to hear you think we’re wonderful too. We’re in this
   together!
