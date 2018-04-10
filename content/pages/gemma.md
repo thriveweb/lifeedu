@@ -1,8 +1,12 @@
 ---
 title: 'Welcome 1 '
 template: Page
-slug: 'welcome '
+slug: welcome
 audio: ''
+happyMessage: asd
+neutralMessage: asd
+sadMessage: asd
+formTitle: asd
 ---
 # Welcome! We're thrilled you've joined the team! 
 
