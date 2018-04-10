@@ -1,7 +1,7 @@
 ---
 title: 'Educator''s perspective '
 template: Page
-slug: 'educatorsperspective '
+slug: educatorsperspective
 ---
 # Your chance to hear from the front line
 
