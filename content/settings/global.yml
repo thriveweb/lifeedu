@@ -2,18 +2,16 @@ siteTitle: Life Education
 siteUrl: 'https://lifeedu.thrivex.xyz'
 siteDescription: stuff
 blueTitle: Visit Life Education website
-blueMessage: >-
-  And learn more about our program orem ipsum dolor sit amet, consectetur
-  adipiscing elit, sed do eiusmod tempor incididunt ut.
-blueLinkURL: 'http://google.com'
+blueMessage: 'To learn more . . '
+blueLinkURL: 'https://www.lifeeducation.org.au'
 officeAddress: |-
   89 Sunshine Boulevard
   Broadbeach QLD 4218
-phone: '1300427653'
+phone: '(07) 5572 0166 '
 email: qld@lifeeducation.org.au
 socialMediaCard:
-  facebookURL: 'http://facebook.com'
-  instagramURL: 'http://instagram.com'
-  linkedinURL: 'http://linkedin.com'
-  twitterURL: 'http://twitter.com'
+  facebookURL: 'https://www.facebook.com/lifeeducationqueensland/'
+  instagramURL: 'https://www.instagram.com/lifeedqld/'
+  linkedinURL: 'https://www.linkedin.com/company/life-education-qld/'
+  twitterURL: 'https://twitter.com/LifeEdQLD?lang=en'
 headerScripts: <!-- Add your analytics scripts / verification meta here -->
