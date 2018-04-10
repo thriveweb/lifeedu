@@ -1,9 +1,10 @@
 ---
 title: Example page
 template: Page
-slug: example-page
+slug: 'example-page '
 audio: /images/uploads/sampleaudio_0.7mb.mp3
 ---
+
 # H1 Ipsum Presents
 
 <iframe src="https://player.vimeo.com/video/263257277" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -28,4 +29,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in 
 * Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 * Aliquam tincidunt mauris eu risus.
 
-Note  paste url's don't render anything. eg.https://www.youtube.com/embed/yw1LxCKswkc
+Note paste url's don't render anything. eg.https://www.youtube.com/embed/yw1LxCKswkc

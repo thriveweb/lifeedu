@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Helmet from 'react-helmet'
 import _merge from 'lodash/merge'
+import _kebabCase from 'lodash/kebabCase'
 
 import Page from './views/Page'
 import FormTemplate from './views/FormTemplate'
@@ -75,7 +76,7 @@ class App extends Component {
                   key={index + page.slug}
                   render={props => <Template page={page} {...props} />}
                   // kabab this
-                  path={`/${page.slug}/`}
+                  path={`/${_kebabCase(page.slug.trim())}/`}
                   exact
                 />
               )
