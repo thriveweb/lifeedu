@@ -1,7 +1,7 @@
 ---
 title: 'Annabel '
 template: Page
-slug: 'Annabel '
+slug: Annabel
 ---
 ## Annabel's story 
 
