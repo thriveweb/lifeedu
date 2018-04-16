@@ -9,4 +9,4 @@ formTitle: ''
 ---
 # You've got mail!
 
-![](/images/uploads/kids pic 2.jpg)
+![HELLO](/images/uploads/kids pic 2.jpg)
