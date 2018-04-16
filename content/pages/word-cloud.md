@@ -1,6 +1,6 @@
 ---
-title: 'Word cloud '
+title: Word Cloud
 template: Page
-slug: 'feedback '
+slug: wordcloud
 ---
-# Here's what they are saying - thanks to you!
+# Feedback from the kids you're helping!
