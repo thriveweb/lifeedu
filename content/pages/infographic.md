@@ -2,7 +2,7 @@
 title: Infographic
 template: Page
 slug: infographic
-audio: /images/uploads/postcard.pdf
+audio: ''
 ---
 # All this- THANKS TO YOU!
 
