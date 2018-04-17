@@ -4,4 +4,4 @@ template: Page
 slug: ts&cs
 audio: /images/uploads/postcard.pdf
 ---
-[TEST](/images/uploads/harold_page-1.pdf)
+[test](/images/uploads/harold_page-1.pdf)
