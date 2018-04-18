@@ -37,11 +37,11 @@ const ImageWithSrcset = ({ nodeKey, src, alt, ...props }) => {
   )
 }
 
-const HtmlBlock = ({ literal }) => (
+const HtmlBlock = ({ value }) => (
   <div
-    className={literal.indexOf('iframe') ? `videoWrapper` : ``}
+    className={value.indexOf('iframe') ? `videoWrapper` : ``}
     dangerouslySetInnerHTML={{
-      __html: literal
+      __html: value
     }}
   />
 )
