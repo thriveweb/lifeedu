@@ -39,6 +39,8 @@
     "lodash": "^4.17.4",
     "moveto": "^1.7.1",
     "netlify-identity-widget": "^1.2.0",
+    "netlify-lambda": "^0.4.0",
+    "node-fetch": "^2.1.2",
     "normalize.css": "^7.0.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
@@ -52,8 +54,7 @@
     "start:app": "react-scripts start",
     "start:content": "chokidar 'content/**/**' -c 'npm run prepare-content'",
     "start:lambda": "netlify-lambda serve src/lambda",
-    "build":
-      "npm-run-all -s prepare-content build:app build:postcss build:sw build:sha",
+    "build": "npm-run-all -s prepare-content build:app build:postcss build:sw build:sha",
     "build:app": "react-scripts build",
     "build:postcss": "postcss build/static/css/*.css -r",
     "build:react-snapshot": "react-snapshot",
@@ -68,7 +69,9 @@
     "eject": "react-scripts eject"
   },
   "reactSnapshot": {
-    "include": ["/404"]
+    "include": [
+      "/404"
+    ]
   },
   "proxy": {
     "/.netlify/functions": {

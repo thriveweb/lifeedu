@@ -5,6 +5,7 @@ import _merge from 'lodash/merge'
 import _kebabCase from 'lodash/kebabCase'
 
 import Page from './views/Page'
+import Entries from './views/Entries'
 import FormTemplate from './views/FormTemplate'
 import ComingSoon from './views/ComingSoon'
 import NoMatch from './views/NoMatch'
@@ -94,6 +95,15 @@ class App extends Component {
             })}
 
             <Route render={props => <ComingSoon {...props} />} path='/' exact />
+            <Route
+              render={props => (
+                <WithWrap>
+                  <Entries {...props} />
+                </WithWrap>
+              )}
+              path='/admin/entries'
+              exact
+            />
             <Route
               render={() => (
                 <WithWrap>
