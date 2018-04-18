@@ -5,4 +5,5 @@
 
 [build]
   publish = "build"
-  command = "npm run build"
+  command = "npm run build && npm run build:lambda"
+  functions = "lambda"

@@ -51,6 +51,7 @@
     "start": "npm-run-all prepare-content -p start:content start:app",
     "start:app": "react-scripts start",
     "start:content": "chokidar 'content/**/**' -c 'npm run prepare-content'",
+    "start:lambda": "netlify-lambda serve src/lambda",
     "build":
       "npm-run-all -s prepare-content build:app build:postcss build:sw build:sha",
     "build:app": "react-scripts build",
@@ -59,6 +60,7 @@
     "build:sw": "sw-precache --config='sw-precache-config.js'",
     "build:sitemap": "node ./functions/generate-sitemap.js",
     "build:sha": "git rev-parse HEAD > build/sha",
+    "build:lambda": "netlify-lambda build src/lambda",
     "parse-content": "node ./functions/parse-content.js",
     "resize-images": "node ./functions/resize-images.js",
     "prepare-content": "npm-run-all -s parse-content resize-images",
@@ -67,5 +69,13 @@
   },
   "reactSnapshot": {
     "include": ["/404"]
+  },
+  "proxy": {
+    "/.netlify/functions": {
+      "target": "http://localhost:9000",
+      "pathRewrite": {
+        "^/\\.netlify/functions": ""
+      }
+    }
   }
 }
