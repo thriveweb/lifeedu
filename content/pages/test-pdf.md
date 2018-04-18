@@ -1,7 +1,7 @@
 ---
 title: 'test pdf '
 template: Page
-slug: ts&cs
+slug: terms&conditions
 audio: ''
 ---
 [test](/images/uploads/harold_page-1.pdf)
