@@ -22,8 +22,7 @@ const fetchForms = ({ token }) =>
   )
 
 export function handler (event, context, callback) {
-  if (!process.env.REACT_APP_NETLIFY_PAT) {
-    const error = 'Need personal access token'
+  const createError = error => {
     console.log(error)
     return callback(null, {
       statusCode: 400,
@@ -31,15 +30,21 @@ export function handler (event, context, callback) {
     })
   }
 
-  console.log(event.body)
-  callback(null, {
-    statusCode: 200,
-    body: JSON.stringify(event.body)
-  })
+  if (!process.env.REACT_APP_NETLIFY_PAT) {
+    return createError('Need personal access token')
+  }
+
+  if (!event.body) {
+    return createError('Need body')
+  }
 
   const data = JSON.parse(event.body)
   console.log(data)
   const { token, url } = data
+
+  if (!token || !url) {
+    return createError('Missing required data')
+  }
 
   fetch(`${url}/user`, {
     headers: {
