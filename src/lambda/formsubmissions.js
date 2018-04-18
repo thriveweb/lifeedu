@@ -31,6 +31,12 @@ export function handler (event, context, callback) {
     })
   }
 
+  console.log(event.body)
+  callback(null, {
+    statusCode: 200,
+    body: JSON.stringify(event.body)
+  })
+
   const data = JSON.parse(event.body)
   console.log(data)
   const { token, url } = data
