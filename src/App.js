@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Helmet from 'react-helmet'
 import _merge from 'lodash/merge'
@@ -6,6 +6,7 @@ import _kebabCase from 'lodash/kebabCase'
 
 import Page from './views/Page'
 import FormTemplate from './views/FormTemplate'
+import ComingSoon from './views/ComingSoon'
 import NoMatch from './views/NoMatch'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -54,7 +55,13 @@ class App extends Component {
     const globalSettings = this.getDocument('settings', 'global')
     const { siteTitle, siteUrl } = globalSettings
     const pages = this.getDocuments('pages')
-
+    const WithWrap = ({ children }) => (
+      <Fragment>
+        <Header />
+        {children}
+        <Footer globalSettings={globalSettings} />
+      </Fragment>
+    )
     return (
       <Router>
         <div className='React-Wrap'>
@@ -65,7 +72,7 @@ class App extends Component {
             defaultTitle={siteTitle}
             titleTemplate={`${siteTitle} | %s`}
           />
-          <Header />
+
           <Switch>
             {pages.map((page, index) => {
               // check for blank ${page.slug}/
@@ -74,7 +81,11 @@ class App extends Component {
               return (
                 <Route
                   key={index + page.slug}
-                  render={props => <Template page={page} {...props} />}
+                  render={props => (
+                    <WithWrap>
+                      <Template page={page} {...props} />
+                    </WithWrap>
+                  )}
                   // kabab this
                   path={`/${_kebabCase(page.slug.trim())}/`}
                   exact
@@ -82,9 +93,15 @@ class App extends Component {
               )
             })}
 
-            <Route render={() => <NoMatch siteUrl={siteUrl} />} />
+            <Route render={props => <ComingSoon {...props} />} path='/' exact />
+            <Route
+              render={() => (
+                <WithWrap>
+                  <NoMatch siteUrl={siteUrl} />
+                </WithWrap>
+              )}
+            />
           </Switch>
-          <Footer globalSettings={globalSettings} />
         </div>
       </Router>
     )

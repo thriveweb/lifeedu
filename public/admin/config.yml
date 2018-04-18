@@ -3,11 +3,36 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 
-# display_url: https://netlify-cms-react-starter.netlify.com # This url will display in the top-right of the CMS
+display_url: https://kidsprotectteam.org.au # This url will display in the top-right of the CMS
 media_folder: "public/images/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
 collections: # A list of collections the CMS should be able to edit
+
+
+  - name: "pages"
+    label: "Page"
+    editor:
+      preview: false
+    folder: content/pages
+    slug: "{{slug}}"
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: Title, name: title, widget: string}
+      - label: 'Template'
+        name: 'template'
+        widget: 'select'
+        options: ["Page", "Form"]
+        default: 'Page'
+      - {label: URL Slug, name: slug, widget: string}
+      - {label: Content, name: body, widget: markdown, required: false}
+      - {label: Audio, name: audio, widget: file, required: false}
+      - {label: Happy message, name: happyMessage, widget: text, required: false}
+      - {label: Neutral message, name: neutralMessage, widget: text, required: false}
+      - {label: Sad message, name: sadMessage, widget: text, required: false}
+      - {label: Form Title, name: formTitle, widget: string, required: false}
+
+
   - name: "settings"
     label: "Settings"
     delete: false # Prevent users from deleting documents in this collection
@@ -37,24 +62,3 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Instagram URL, name: instagramURL, widget: string, required: false}
           - {label: Header Meta / Scripts, name: headerScripts, widget: text, required: false}
           - {label: Enable Service Worker Pre-Cache, name: enableServiceWorker, widget: boolean, required: false}
-  - name: "pages"
-    label: "Page"
-    editor:
-      preview: false
-    folder: content/pages
-    slug: "{{slug}}"
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
-      - {label: Title, name: title, widget: string}
-      - label: 'Template'
-        name: 'template'
-        widget: 'select'
-        options: ["Page", "Form"]
-        default: 'Page'
-      - {label: URL Slug, name: slug, widget: string}
-      - {label: Content, name: body, widget: markdown, required: false}
-      - {label: Audio, name: audio, widget: file, required: false}
-      - {label: Happy message, name: happyMessage, widget: text, required: false}
-      - {label: Neutral message, name: neutralMessage, widget: text, required: false}
-      - {label: Sad message, name: sadMessage, widget: text, required: false}
-      - {label: Form Title, name: formTitle, widget: string, required: false}
