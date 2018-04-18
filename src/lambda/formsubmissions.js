@@ -6,6 +6,7 @@ const forms = [
   '5ac32645ae529019e141a487'
 ]
 
+const siteUrl = 'https://lifeedu.netlify.com'
 const endpoint = ({ token, formID }) =>
   `https://api.netlify.com/api/v1/forms/${formID}/submissions/?access_token=${token}`
 
@@ -46,7 +47,7 @@ export function handler (event, context, callback) {
     return createError('Missing required data')
   }
 
-  fetch(`${url}/user`, {
+  fetch(`${siteUrl + url}/user`, {
     headers: {
       Authorization: `Bearer ${token.access_token}`
     }
