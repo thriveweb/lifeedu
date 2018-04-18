@@ -14,4 +14,16 @@ socialMediaCard:
   instagramURL: 'https://www.instagram.com/lifeedqld/'
   linkedinURL: 'https://www.linkedin.com/company/life-education-qld/'
   twitterURL: 'https://twitter.com/LifeEdQLD?lang=en'
-headerScripts: <!-- Add your analytics scripts / verification meta here -->
+headerScripts: >-
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script async
+  src="https://www.googletagmanager.com/gtag/js?id=UA-112677798-5"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-112677798-5');
+  </script>
