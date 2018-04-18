@@ -1,4 +1,5 @@
 import fetch from 'node-fetch'
+require('dotenv').config({ path: '.env.local' })
 
 const forms = [
   '5ac46bf6494c584a01a742a0',
@@ -35,8 +36,8 @@ export function handler (event, context, callback) {
     return createError('Need personal access token')
   }
 
-  if (!event.body) {
-    return createError('Need body')
+  if (event.httpMethod !== 'POST') {
+    return createError('Method not allowed')
   }
 
   const data = JSON.parse(event.body)
