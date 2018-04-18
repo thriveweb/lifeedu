@@ -53,8 +53,9 @@
     "start": "npm-run-all prepare-content -p start:content start:app",
     "start:app": "react-scripts start",
     "start:content": "chokidar 'content/**/**' -c 'npm run prepare-content'",
-    "start:lambda": "netlify-lambda serve src/lambda",
-    "build": "npm-run-all -s prepare-content build:app build:postcss build:sw build:sha",
+    "start:lambda": "netlify-lambda serve src/lambda -p 9001",
+    "build":
+      "npm-run-all -s prepare-content build:app build:postcss build:sw build:sha",
     "build:app": "react-scripts build",
     "build:postcss": "postcss build/static/css/*.css -r",
     "build:react-snapshot": "react-snapshot",
@@ -69,13 +70,11 @@
     "eject": "react-scripts eject"
   },
   "reactSnapshot": {
-    "include": [
-      "/404"
-    ]
+    "include": ["/404"]
   },
   "proxy": {
     "/.netlify/functions": {
-      "target": "http://localhost:9000",
+      "target": "http://localhost:9001",
       "pathRewrite": {
         "^/\\.netlify/functions": ""
       }
