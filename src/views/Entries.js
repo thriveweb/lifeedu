@@ -21,6 +21,7 @@ class Entries extends React.Component {
       if (!user) {
         window.location = '/admin'
       }
+      netlifyIdentity.currentUser().jwt()
       this.setState(
         {
           currentUser: netlifyIdentity.currentUser()
