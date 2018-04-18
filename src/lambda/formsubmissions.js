@@ -48,7 +48,7 @@ export function handler (event, context, callback) {
     return createError('Missing required data')
   }
 
-  fetch(`${siteUrl + url}/user`, {
+  fetch(`${url.startsWith('http') ? url : siteUrl + url}/user`, {
     headers: {
       Authorization: `Bearer ${token.access_token}`
     }
