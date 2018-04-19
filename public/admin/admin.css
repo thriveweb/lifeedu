@@ -1,3 +1,7 @@
+.nc-entryEditor-controlPane {
+  padding: 0 16px 50px 16px;
+}
+
 /* Admin tweaks 1.0.3 */
 .nc-mediaLibrary-cardImage {
   object-fit: contain;
@@ -75,4 +79,32 @@
   transform: translate(-50%, -50%);
   width: auto;
   text-indent: 0;
+}
+
+.entries-link {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: white;
+  width: 180px;
+  text-align: center;
+  border-radius: 0 5px 0 0;
+  box-shadow: 0 2px 6px 0 rgba(68, 74, 87, 0.05),
+    0 1px 3px 0 rgba(68, 74, 87, 0.1);
+}
+.entries-link a {
+  align-items: center;
+  border-left: 2px solid #fff;
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+}
+.nc-icon {
+  margin: 0 5px 0 0;
+}
+.entries-link a:hover {
+  background-color: #e8f5fe;
+  border-left-color: #4863c6;
+  color: #3a69c7;
 }

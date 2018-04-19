@@ -2,6 +2,8 @@ import React from 'react'
 import Papa from 'papaparse'
 import FileSaver from 'file-saver'
 
+import './Entries.css'
+
 class Entries extends React.Component {
   state = {
     currentUser: null,
@@ -53,8 +55,8 @@ class Entries extends React.Component {
       .then(({ forms }) => this.setState({ forms }))
   }
 
-  CSVData ({ form }) {
-    let csv = Papa.unparse(form.entries)
+  CSVData ({ form, entryData }) {
+    let csv = Papa.unparse(entryData)
     var blob = new Blob([csv], { type: 'data:text/csv;charset=utf-8' })
     return FileSaver.saveAs(blob, form.title + '.csv')
   }
@@ -73,29 +75,26 @@ class Entries extends React.Component {
     // const currentForm = JSON.stringify(form.entries, null, 2)
 
     return (
-      <section className='section'>
-        <div className='container'>
+      <section className='section Entries'>
+        <div className='container Entries--container'>
           {(forms || []).map(form => {
+            const entryData = form.entries.map(
+              ({ human_fields: humanFields, created_at: date, ...entry }) => ({
+                ...humanFields,
+                date
+              })
+            )
             return (
-              <div key={form.formID}>
-                <h4>{form.title}</h4>
-                <div className='total'>{form.entries.length}</div>
-                <a onClick={() => this.CSVData({ form })} href='#'>
-                  csv
+              <div key={form.formID} className='Entries--one-third'>
+                <h4 className='Entries--title'>{form.title}</h4>
+                <div className='Entries--total'>{form.entries.length}</div>
+                <a
+                  className='Button-outline'
+                  onClick={() => this.CSVData({ form, entryData })}
+                  href='#'
+                >
+                  Download CSV
                 </a>
-                {}
-                {form.entries.map((entry, index) => {
-                  return (
-                    <main key={index}>
-                      {/* {console.log(entry.human_fields)}
-                      {entry.human_fields.Name}
-                      {entry.human_fields.Email}
-                      {entry.human_fields.Message}
-                      {entry.human_fields.Agree}
-                      {entry.human_fields['Happy Feedback']} */}
-                    </main>
-                  )
-                })}
               </div>
             )
           })}

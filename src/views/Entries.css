@@ -1,0 +1,21 @@
+.Entries {
+}
+
+.Entries--container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.Entries--one-third {
+  width: 30%;
+  text-align: center;
+}
+
+.Entries--title {
+  font-size: 3rem;
+}
+.Entries--total {
+  font-size: 2.5rem;
+}
