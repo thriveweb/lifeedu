@@ -70,17 +70,16 @@ class Entries extends React.Component {
           {(forms || []).map(form => (
             <div key={form.formID}>
               <h4>{form.title}</h4>
-
+              <div className='total'>{form.entries.length}</div>
               {form.entries.map((entry, index) => {
                 return (
                   <main key={index}>
-                    <div className='total'>{index}</div>
                     {console.log(entry.human_fields)}
                     {entry.human_fields.Name}
                     {entry.human_fields.Email}
                     {entry.human_fields.Message}
                     {entry.human_fields.Agree}
-                    {entry.human_fields.Feedback}
+                    {entry.human_fields['Happy Feedback']}
                   </main>
                 )
               })}

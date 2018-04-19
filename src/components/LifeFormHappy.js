@@ -75,7 +75,7 @@ class Form extends React.Component {
           <div className='EnquiryForm--Alert'>{this.state.alert}</div>
         )}
         {!!subject && <input type='hidden' name='subject' value={subject} />}
-        <input type='hidden' name='happy_feedback' value='happy_feedback' />
+        <input type='hidden' name='happy_feedback' value='happy feedback' />
         <input type='hidden' name='form-name' value={name} />
         <input
           className='Button EnquiryForm--SubmitButton'
