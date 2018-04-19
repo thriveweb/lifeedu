@@ -54,7 +54,6 @@ class Entries extends React.Component {
   render () {
     const { currentUser, forms } = this.state
 
-    console.log(forms)
     if (!currentUser) {
       return (
         <section className='section'>
@@ -63,15 +62,28 @@ class Entries extends React.Component {
       )
     }
 
+    // const currentForm = JSON.stringify(form.entries, null, 2)
+
     return (
       <section className='section'>
         <div className='container'>
           {(forms || []).map(form => (
-            <div key={form.id}>
-              <h4>{form.id}</h4>
-              <pre>
-                <code>{JSON.stringify(form.entries, null, 2)}</code>
-              </pre>
+            <div key={form.formID}>
+              <h4>{form.title}</h4>
+
+              {form.entries.map((entry, index) => {
+                return (
+                  <main key={index}>
+                    <div className='total'>{index}</div>
+                    {console.log(entry.human_fields)}
+                    {entry.human_fields.Name}
+                    {entry.human_fields.Email}
+                    {entry.human_fields.Message}
+                    {entry.human_fields.Agree}
+                    {entry.human_fields.Feedback}
+                  </main>
+                )
+              })}
             </div>
           ))}
         </div>

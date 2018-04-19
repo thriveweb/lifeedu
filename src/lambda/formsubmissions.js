@@ -2,9 +2,18 @@ import fetch from 'node-fetch'
 require('dotenv').config({ path: '.env.local' })
 
 const forms = [
-  '5ac46bf6494c584a01a742a0',
-  '5ac40fd88c8f337729f9a1bf',
-  '5ac32645ae529019e141a487'
+  {
+    formID: '5ac46bf6494c584a01a742a0',
+    title: 'Happy'
+  },
+  {
+    formID: '5ac40fd88c8f337729f9a1bf',
+    title: 'Neutral'
+  },
+  {
+    formID: '5ac32645ae529019e141a487',
+    title: 'Sad'
+  }
 ]
 
 const siteUrl = 'https://lifeedu.netlify.com'
@@ -13,11 +22,12 @@ const endpoint = ({ token, formID }) =>
 
 const fetchForms = ({ token }) =>
   Promise.all(
-    forms.map(formID =>
+    forms.map(({ formID, title }) =>
       fetch(endpoint({ token, formID }))
         .then(res => res.json())
         .then(data => ({
-          id: formID,
+          formID,
+          title,
           entries: data
         }))
     )
