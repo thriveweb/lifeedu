@@ -69,7 +69,7 @@ class FormSwitch extends React.Component {
             page.happyMessage && (
               <div className='FormResults-result'>
                 {page.happyMessage}
-                <LifeFormHappy title={page.formTitle} name='happy' />
+                <LifeForm title={page.formTitle} name='happy' />
               </div>
             )}
           {activeItem === 2 &&

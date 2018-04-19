@@ -12,7 +12,6 @@ export default ({ page }) => (
     <div className='section thin'>
       <div className='container'>
         <Content source={page.content} />
-        {console.log(page)}
         {page.audio && (
           <audio controls>
             <source src={page.audio} type='audio/mpeg' />
