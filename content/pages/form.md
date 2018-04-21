@@ -1,5 +1,5 @@
 ---
-title: Example Form
+title: Survey
 template: Form
 slug: survey
 happyMessage: >-
