@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import _merge from 'lodash/merge'
 import _kebabCase from 'lodash/kebabCase'
 
+import Meta from './components/Meta'
 import Page from './views/Page'
 import Entries from './views/Entries'
 import FormTemplate from './views/FormTemplate'
@@ -54,7 +55,7 @@ class App extends Component {
 
   render () {
     const globalSettings = this.getDocument('settings', 'global')
-    const { siteTitle, siteUrl } = globalSettings
+    const { siteTitle, headerScripts, siteUrl } = globalSettings
     const pages = this.getDocuments('pages')
     const WithWrap = ({ children }) => (
       <Fragment>
@@ -73,6 +74,7 @@ class App extends Component {
             defaultTitle={siteTitle}
             titleTemplate={`${siteTitle} | %s`}
           />
+          <Meta title={siteTitle} url={siteUrl} headerScripts={headerScripts} />
 
           <Switch>
             {pages.map((page, index) => {
