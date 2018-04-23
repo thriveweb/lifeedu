@@ -2,6 +2,8 @@
 title: Word Cloud
 template: Page
 slug: wordcloud
-audio: /images/uploads/harold_page-1.pdf
+audio: ''
 ---
-# Feedback from the kids you're helping!
+# Feedback from the kids & parents you're helping!
+
+![](/images/uploads/harod-jpeg.jpg)
