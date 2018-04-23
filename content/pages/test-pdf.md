@@ -4,9 +4,7 @@ template: Page
 slug: recipe-cards
 audio: ''
 ---
-test
-
-fdhdgh
+# All RecipeCards PDFs with links
 
 [![BIRCHER_MUESLI](/images/uploads/BIRCHER_MUESLI.jpg)](/images/uploads/LEQLD_RecipeCard_BIRCHER_MUESLI.pdf) 
 [Download PDF](/images/uploads/LEQLD_RecipeCard_BIRCHER_MUESLI.pdf)
