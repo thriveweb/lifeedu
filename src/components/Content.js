@@ -41,7 +41,7 @@ const HtmlBlock = ({ value }) => {
   if (value.indexOf('<iframe') !== 0) return value
   return (
     <div
-      className={`Content--Iframe`}
+      className={`videoWrapper`}
       dangerouslySetInnerHTML={{
         __html: value
       }}
