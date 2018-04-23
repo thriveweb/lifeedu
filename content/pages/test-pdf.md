@@ -1,5 +1,5 @@
 ---
-title: 'All RecipeCards PDF's with links'
+title: 'All RecipeCards PDFs with links'
 template: Page
 slug: recipe-cards
 audio: ''
