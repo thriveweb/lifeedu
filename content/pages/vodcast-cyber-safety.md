@@ -13,7 +13,7 @@ slug: Vodcast
 
 
 
-Our five key point summary from the Cybersafety for Parents Vodcasts:
+**Our five key point summary from the Cybersafety for Parents Vodcasts:**
 
 \- Children are using the internet more than ever.
 
