@@ -19,7 +19,8 @@ export default ({ source, className = '' }) => (
     source={encodeMarkdownURIs(source)}
     renderers={{
       image: ImageWithSrcset,
-      html: HtmlBlock
+      html: HtmlBlock,
+      link: Link
     }}
   />
 )
@@ -46,5 +47,14 @@ const HtmlBlock = ({ value }) => {
         __html: value
       }}
     />
+  )
+}
+
+const Link = props => {
+  let target = props.href.endsWith('.pdf') ? '_blank' : null
+  return (
+    <a href={props.href} target={target}>
+      {props.children}
+    </a>
   )
 }
