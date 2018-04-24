@@ -1,7 +1,7 @@
 ---
-title: Collage Images
+title: Thank you artwork
 template: Page
-slug: collage-images
+slug: beautifulartworks
 ---
 # Collage Images
 
