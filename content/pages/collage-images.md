@@ -3,7 +3,7 @@ title: Thank you artwork
 template: Page
 slug: beautifulartworks
 ---
-# Collage Images
+# A huge thanks from the kids you're supporting!
 
 ![Kids drawings](/images/uploads/kids-team-drawings.jpg)
 
