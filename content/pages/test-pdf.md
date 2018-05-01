@@ -1,12 +1,10 @@
 ---
-title: All RecipeCards PDFs with links
+title: Recipe Cards PDFs
 template: Page
 slug: recipe-cards
 audio: ''
 ---
-# All RecipeCards PDFs with links
-
-[![BIRCHER_MUESLI](/images/uploads/BIRCHER_MUESLI.jpg)](/images/uploads/LEQLD_RecipeCard_BIRCHER_MUESLI.pdf) 
+# Just for you . . .  
 [Download PDF](/images/uploads/LEQLD_RecipeCard_BIRCHER_MUESLI.pdf)
 
 [![BURGERS](/images/uploads/BURGERS.jpg)](/images/uploads/LEQLD_RecipeCard_BURGERS.pdf)

@@ -1,7 +1,7 @@
 ---
 title: Thank you artwork
 template: Page
-slug: beautifulartworks
+slug: beautiful-artworks
 ---
 # A huge thanks from the kids you're supporting!
 
