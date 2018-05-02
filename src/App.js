@@ -96,7 +96,15 @@ class App extends Component {
               )
             })}
 
-            <Route render={props => <ComingSoon {...props} />} path='/' exact />
+            <Route
+              render={props => (
+                <WithWrap>
+                  <ComingSoon {...props} />
+                </WithWrap>
+              )}
+              path='/'
+              exact
+            />
             <Route
               render={props => (
                 <WithWrap>
