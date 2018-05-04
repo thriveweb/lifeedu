@@ -6,4 +6,4 @@ audio: ''
 ---
 # All this- THANKS TO YOU!
 
-![null](/images/uploads/le0517_infographic_va.jpg)
+![null](/images/uploads/le0517_infographic_va_large.jpg)
