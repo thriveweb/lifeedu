@@ -9,4 +9,4 @@ slug: beautiful-artworks
 
 ![Kids drawings2](/images/uploads/kids-team-drawings2.jpg)
 
-![Kids drawings3](/images/uploads/kids-team-drawings3.jpg)
+![Kids drawings3](/images/uploads/celine-chapel-hill-ss-2013.jpg)
