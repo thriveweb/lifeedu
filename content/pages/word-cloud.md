@@ -6,4 +6,4 @@ audio: ''
 ---
 # Feedback from the kids & parents you're helping!
 
-![](/images/uploads/harod-jpeg.jpg)
+![null](/images/uploads/harod-jpeg.jpg)
