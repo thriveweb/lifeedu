@@ -1,5 +1,5 @@
 ---
-title: 'Vodcast Cyber Safety '
+title: Vodcast Cyber Safety
 template: Page
 slug: Vodcast
 ---
